@@ -1,0 +1,17 @@
+h2{
+  align-content: center;
+  color: rgb(47, 47, 146);
+  font-family: sans-serif;
+}
+
+body{
+  background-color: rgb(164, 173, 173);
+}
+
+input{
+  color: darkslategrey;
+}
+
+table{
+  border: 1cm;
+}

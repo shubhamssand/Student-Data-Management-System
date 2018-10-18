@@ -1,0 +1,16 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+<form class="login" action="http://127.0.0.1:8080/login" method="post">
+        <h6 class="login-title">Please enter user name and password</h6>
+        
+        <input type="text" class="login-input" placeholder="User Name" name="username" autofocus required>
+        <input type="password" class="login-input" placeholder="Password" name="password" required>
+        <input type="submit" value="Login" class="login-button">
+        <br><br>
+        <label><%= error.error1%></label>
+      </form>
+      </body>
+      </html>

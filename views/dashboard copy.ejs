@@ -1,0 +1,50 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+       
+ 
+         <script>
+             function setValue(id){
+                 
+             
+            document.getElementById("hide").value=id;
+             }     
+         </script>
+
+    </head>
+    
+<body>
+        
+    <form action='/delete' method="POST">
+    <div class="container">
+        <h2>Students List</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Department</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% studentinfo.forEach(function(student){ let id = student.studentId;%>
+                    <tr>
+                        <td><%= student.studentId %></td>
+                        <td><%= student.studentName %></td>
+                        <td><%= student.department %></td>
+                        <td><input type="submit"  value="Delete"  onclick='setValue(this.id)' id="<%=student.studentId %>"  ></td>
+                        
+                    </tr>
+                    
+                <%  }); %>
+            </tbody>
+        </table>
+    </div>    
+    
+    
+   <input type="hidden" name="studId" id="hide" value="" >
+    
+</form>
+    </body>
+      </html>

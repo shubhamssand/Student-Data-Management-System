@@ -1,0 +1,67 @@
+<html>
+    <head>
+            
+            <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+       
+        <link rel="stylesheet" type="text/css" href="css/dashboard.css">
+         <script>
+             src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+             
+             </script>
+
+            <script>
+          src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+          </script>
+
+          <script>
+             function setValue(id){
+                 
+             
+            document.getElementById("hide").value=id;
+             }     
+         </script>
+
+    </head>
+    
+<body>
+        
+    <form action='/delete' method="POST">
+    <div class="container">
+            <h2></h2>
+            <ul class="nav nav-pills">
+                    <li class="active"><a href="/dashboard">Student Dashboard</a></li>
+                    <li><a href="/AddStudent">Add Student</a></li>
+            </ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Student ID</th>
+                    <th>Department</th>
+                    <th>Delete Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% studentinfo.forEach(function(student){ let id = student.studentId;%>
+                    <tr>
+                        <td><%= student.studentName %></td>
+                        <td><%= student.studentId %></td>
+                        <td><%= student.department %></td>
+                        <td><input type="submit"  value="Delete"  onclick='setValue(this.id)' id="<%=student.studentId %>"  ></td>
+                        
+                    </tr>
+                
+                    
+                <%  }); %>
+            </tbody>
+        </table>
+    </div>    
+    
+    
+   <input type="hidden" name="studId" id="hide" value="" >
+    
+</form>
+    </body>
+      </html>

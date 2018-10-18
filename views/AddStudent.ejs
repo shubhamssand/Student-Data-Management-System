@@ -1,0 +1,27 @@
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="css/AddStudent.css">
+    </head>
+    <body>
+    <!-- multistep form -->
+<form id="msform" action="http://127.0.0.1:8080/AddStudent" method="post">
+        <!-- progressbar -->
+        <ul id="progressbar">
+          
+          
+        </ul>
+        <!-- fieldsets -->
+        <fieldset>
+          <h2 class="fs-title">Add Student Information</h2>
+          
+          <input type="number" name="studentId" placeholder="Student id" required/>
+          <input type="text" name="studentName" placeholder="Student Name" required/>
+          <input type="text" name="department" placeholder="Department" required/>
+          <input type="submit" name="next" class="next action-button" value="Add Student" />
+          <input type="reset" name="clear" class="next action-button" value="Clear" />
+        </fieldset>
+        
+      </form>
+    </body>
+      
+</html>
